@@ -1,0 +1,23 @@
+## 1.SORU
+Film tablosunda bulunan title ve despriction sütunlarýndaki verileri sýralayýnýz.
+SELECT title , description from film;
+
+## 2.SORU
+Film tablosunda bulunan tüm sütunlardaki verileri film uzunluðu (length)60 dan büyük ve 75 ten küçük olma koþullarýyla sýralayýnýz.
+select * from Film `
+where length > (60) and length < (75);
+
+## 3.SORU
+customer tablosunda bulunan first_name sütunundaki deðeri 'Mary' olan müþterinin last_name sütunundaki deðeri nedir?
+SELECT last_name FROM customer
+WHERE first_name= 'Mary'
+
+## 4.SORU
+Film tablosunda bulunan tüm sütunlardaki verileri rental_rate 0.99 ve replacement_cost 12.99 veya 28.99 olma koþullarýyla sýralayýnýz.
+SELECT * FROM film 
+WHERE rental_rate = (0.99) AND replacement_cost = (12.99) OR replacement_cost =(28.99);
+
+## 5.SORU
+film tablosundaki uzunluðu (length) 50 den büyük olmayýp ayný zamanda rental_rate deðeri 2.99 veya 4.99 olmayan verileri sýralayýnýz.
+SELECT * FROM film
+WHERE  length < 50 AND NOT((rental_rate = (2.99) OR rental_rate=(4.99)));

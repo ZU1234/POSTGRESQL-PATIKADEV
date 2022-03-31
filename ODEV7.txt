@@ -1,0 +1,23 @@
+##SORU 1
+film tablosunda bulunan filmleri rating deðerlerine göre gruplayýnýz.
+SELECT rating FROM film
+GROUP BY rating;
+
+##SORU 2
+film tablosunda bulunan filmleri replacement_cost sütununa göre grupladýðýmýzda film sayýsý 50 den fazla olan replacement_cost deðerini ve karþýlýk gelen film sayýsýný sýralayýnýz.
+SELECT COUNT(title) ,replacement_cost FROM film
+GROUP BY replacement_cost
+HAVING COUNT(title)>50
+ORDER BY replacement_cost ASC;
+
+##SORU 3
+Customer tablosunda bulunan store_id deðerlerine karþýlýk gelen müþteri sayýlarýný nelerdir? 
+SELECT store_id FROM customer
+GROUP BY store_id;
+
+##SORU 4
+ city tablosunda bulunan þehir verilerini country_id sütununa göre gruplandýrdýktan sonra en fazla þehir sayýsý barýndýran country_id bilgisini ve þehir sayýsýný paylaþýnýz.
+SELECT country_id,COUNT(city) FROM city
+GROUP BY country_id 
+ORDER BY COUNT(city)DESC
+LIMIT 1;

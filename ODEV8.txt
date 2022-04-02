@@ -1,10 +1,10 @@
 ##SORU 1
-test veritabanýnýzda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluþturalým.
+test veritabanÃ½nÃ½zda employee isimli sÃ¼tun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluÃ¾turalÃ½m.
 
 CREATE TABLE employee(Id INTEGER NULL,name VARCHAR(50),birthday DATE,email VARCHAR(100));
 _________________________________________________________________________________________________________________________________________________
 ##SORU 2
-Oluþturduðumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
+OluÃ¾turduÃ°umuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
 
 insert into employee (id, name, birthday, email) values (1, 'Horacio', '1685-09-27', 'hgane0@prnewswire.com');
 insert into employee (id, name, birthday, email) values (2, 'Roddie', '1979-10-29', 'rhowgill1@imgur.com');
@@ -58,12 +58,12 @@ insert into employee (id, name, birthday, email) values (49, 'Tucky', '1958-10-0
 insert into employee (id, name, birthday, email) values (50, 'Faulkner', '1619-12-24', 'fmitrovic1d@engadget.com');
 ___________________________________________________________________________________________________________________________
 ##SORU 3
-Sütunlarýn her birine göre diðer sütunlarý güncelleyecek 5 adet UPDATE iþlemi yapalým.
+SÃ¼tunlarÃ½n her birine gÃ¶re diÃ°er sÃ¼tunlarÃ½ gÃ¼ncelleyecek 5 adet UPDATE iÃ¾lemi yapalÃ½m.
 
 UPDATE employee 
-SET name='yýldýz',
+SET name='yÃ½ldÃ½z',
 	birthday='1999-12-24',
-	email='yýldýz_argun@gmail.com'
+	email='yÃ½ldÃ½z_argun@gmail.com'
 	WHERE id=(5)
 	RETURNING *;
 
@@ -82,7 +82,7 @@ SET name='Hasan',
 	RETURNING *;
 
 UPDATE employee 
-SET name='Þükran',
+SET name='ÃžÃ¼kran',
 	birthday='1984-09-11',
 	email='sukran4567@gmail.com'
 	WHERE id=(27)
@@ -96,7 +96,7 @@ SET name='Serdar',
 	RETURNING *;
 _________________________________________________________________________________________________________________________
 ##SORU 4
-Sütunlarýn her birine göre ilgili satýrý silecek 5 adet DELETE iþlemi yapalým.
+SÃ¼tunlarÃ½n her birine gÃ¶re ilgili satÃ½rÃ½ silecek 5 adet DELETE iÃ¾lemi yapalÃ½m.
 
 DELETE FROM employee
 WHERE name='Hasan';
@@ -113,6 +113,3 @@ WHERE email='sukran4567@gmail.com';
 DELETE FROM employee
 WHERE id=(8);
 
-
-##SORU 4
-Sütunlarýn her birine göre ilgili satýrý silecek 5 adet DELETE iþlemi yapalým.

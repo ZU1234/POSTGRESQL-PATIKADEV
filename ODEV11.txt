@@ -1,0 +1,42 @@
+##SORU 1
+actor ve customer tablolarýnda bulunan first_name sütunlarý için tüm verileri sýralayalým.
+
+SELECT first_name FROM actor
+UNION
+SELECT first_name FROM customer;
+
+##SORU 2
+actor ve customer tablolarýnda bulunan first_name sütunlarý için kesiþen verileri sýralayalým.
+
+SELECT first_name FROM actor
+INTERSECT
+SELECT first_name FROM customer;
+
+##SORU 3
+actor ve customer tablolarýnda bulunan first_name sütunlarý için ilk tabloda bulunan ancak ikinci tabloda bulunmayan verileri sýralayalým.
+
+SELECT first_name FROM actor
+EXCEPT
+SELECT first_name FROM customer;
+
+##SORU 4
+actor ve customer tablolarýnda bulunan first_name sütunlarý için tekrar eden  veriler ile birlikte sýralayalým.
+
+SELECT first_name FROM actor
+UNION ALL
+SELECT first_name FROM customer;
+
+##SORU 5
+actor ve customer tablolarýnda bulunan first_name sütunlarý için kesiþen verileri tekrar eden verilerle sýralayalým.
+
+SELECT first_name FROM actor
+INTERSECT ALL
+SELECT first_name FROM customer;
+
+##SORU 6
+actor ve customer tablolarýnda bulunan first_name sütunlarý için ilk tabloda bulunan ancak ikinci tabloda bulunmayan tekrar eden verileri sýralayalým.
+
+SELECT first_name FROM actor
+EXCEPT ALL
+SELECT first_name FROM customer;
+

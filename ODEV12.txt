@@ -1,0 +1,29 @@
+##SORU 1
+film tablosunda film uzunluðu length sütununda gösterilmektedir. Uzunluðu ortalama film uzunluðundan fazla kaç tane film vardýr?
+
+SELECT COUNT(LENGTH) FROM FILM
+WHERE LENGTH>
+(SELECT AVG(LENGTH) FROM FILM);
+
+##SORU 2
+film tablosunda en yüksek rental_rate deðerine sahip kaç tane film vardýr?
+
+SELECT COUNT(RENTAL_RATE) FROM FILM
+WHERE RENTAL_RATE=
+(SELECT MAX(RENTAL_RATE) FROM FILM);
+
+##SORU 3
+film tablosunda en düþük rental_rate ve en düþüK replacement_cost deðerlerine sahip filmleri sýralayýnýz.
+
+SELECT COUNT(RENTAL_RATE),COUNT(REPLACEMENT_COST) FROM FILM
+WHERE RENTAL_RATE=
+(SELECT MIN(RENTAL_RATE) FROM FILM) AND REPLACEMENT_COST=
+(SELECT MIN(REPLACEMENT_COST) FROM FILM);
+
+##SORU 4
+payment tablosunda en fazla sayýda alýþveriþ yapan müþterileri(customer) sýralayýnýz.
+
+select * from customer 
+where customer_id = 
+(select MAX(customer_id) from payment);
+
